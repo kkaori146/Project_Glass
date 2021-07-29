@@ -5,6 +5,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
     <title>Project Glass</title>
 </head>
+
+<script>
+    function mudaFoto (foto) {
+    document.getElementById("icone").src=foto;
+    }
+</script>
+
 <body>
 
     <div id="interface">
@@ -25,7 +32,7 @@
 
 <ul type="disc">
 
-<li><a href="assets/html/index.html">Home</a></li>
+<li onmouseover="mudaFoto('assets/images/home.png')" onmouseout="mudaFoto('assets/images/glass-oculos-preto-peq.png')"><a href="assets/html/index.html">Home</a></li>
 <li><a href="assets/html/specs.html">Especificações</a></li>
 <li><a href="assets/html/fotos.html">Fotos</a></li>
 <li><a href="assets/html/multimidia.html">Multimídia</a></li>
