@@ -40,7 +40,7 @@ a:hover {
   header#cabecalho {
       border-bottom: 1px #606060 solid;
       height: 150px;
-      background: url("../images/glass-logo-peq.jpg") no-repeat 0px 80px;
+      background: url("images/glass-logo-peq.jpg") no-repeat 0px 80px;
   }
 
 header#cabecalho h1 {
