@@ -237,6 +237,58 @@ margin-top: 0px;
       text-align: center;
   }
 
+  div#tv-radio{
+    width: 900px;
+    height: 580px;
+    margin: auto;
+    background: url("../images/radio-tv.png") no-repeat;
+}
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+
+iframe#frame-spec {
+    width: 400px;
+    height: 280px;
+    border: none;
+    overflow: hidden;
+    }
+
+iframe#frame-spec::-webkit-scrollbar {
+    display: none;   
+}
+audio#musica {
+    display: block;
+    position: relative;
+    left: 575px;
+    top: 488px;
+    width: 300px;
+}
+
+video#filme {
+    display: block;
+    position: relative;
+    left: 90px;
+    top: 70px;
+    width: 440px;
+}
+
+video#video-p1 {
+    display: block;
+    position: relative;
+    left: 100px;
+    top: -7px;
+    width: 300px;
+}
+video#video-p2 {
+    display: block;
+    position: relative;
+    left: 0px;
+    top: center;
+    width: 350px;
+}
 
 
 
