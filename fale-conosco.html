@@ -53,7 +53,7 @@
 </hgroup>
     </header>
 
-    <form>
+    <form method="POST" id="fContato" action="mailto:contato@outlook.com">
         
         <fieldset id="usuario">
 <legend>Identificação do Usuário</legend>
@@ -73,23 +73,50 @@
 <fieldset id="endereco">
 <legend>Endereço do Usuário</legend>
     <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="20" maxlength="80" placeholder="Logradouro, nº"/></p>
-    <p><label for="cNumero">Número:</label><input type="number" name="tNumero" id="cNumero" size="5" maxlength="10" placeholder="Número do Logradouro"/></p>
-    <p><label for="cEstado">Estado:</label><input type="text" name="tEstado" id="cEstado" size="20" maxlength="30" placeholder="Estado"/></p>
-    <p><label for="cCidade">Cidade:</label><input type="text" name="tCidade" id="cCidade" size="10" maxlength="20" placeholder="Cidade"/></p>
-</fieldset>
+    <p><label for="cNumero">Número:</label><input type="number" name="tNumero" id="cNumero" min="0" max="99999"/></p>
+    <p><label for="cEst">Estado:</label>
+        <select name="tEst" id="cEst">
+
+           <optgroup label="Região Sudeste">
+               <option value="SP">São Paulo</option>
+               </optgroup>
+
+               <optgroup label="Região Sul">
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="PR">Paraná</option>
+            <option value="SC" selected>Santa Catarina</option>
+            </optgroup>
+
+            <optgroup label="Região Nordeste">
+            <option value="AL">Alagoas</option>
+            </optgroup>
+        </select></p>
+
+    <p><label for="cCid">Cidade:</label>
+        <input type="text" name="tCid" id="cCid" size="10" maxlength="20" placeholder="Sua Cidade" list="cidades"/></p>
+<datalist id="cidades">
+    <option value="São Paulo"></option>
+    <option value="Maceió"></option>
+    <option value="São José dos Pinhais"></option>
+    <option value="Tubarão"></option>
+    <option value="Blumenau"></option>
+</datalist>
+    </fieldset>
 
 <fieldset id="mensagem">
 <legend>Mensagem do Usuário</legend>
-    <p>Grau de Urgência:</p>
-    Mensagem:
+    <p><label for="cUrg">Grau de Urgência:</label>
+    Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="1"/>Máx</p>
+    <p><label for="cMsg">Mensagem:</label>
+    <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe sua Mensagem"></textarea></p>
 </fieldset>
 
 <fieldset id="pedido">
 <legend>Quero um Google Glass</legend>
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+    <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cCor">Cor:</label></p>
+    <p><label for="cQtd">Quantidade:</label></p>
+    <p><label for="cTot">Preço Total: R$</label></p>
 </fieldset>
 
 [BOTÃO ENVIAR]
